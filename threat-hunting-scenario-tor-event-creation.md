@@ -45,7 +45,7 @@ DeviceFileEvents
 | where FileName startswith "tor"
 
 // TOR Browser being silently installed
-// Take note of two spaces before the /S (I don't know why)
+// Take note of two spaces before the /S
 DeviceProcessEvents
 | where ProcessCommandLine contains "tor-browser-windows-x86_64-portable-14.0.1.exe  /S"
 | project Timestamp, DeviceName, ActionType, FileName, ProcessCommandLine
@@ -94,5 +94,5 @@ DeviceFileEvents
 ## Revision History:
 | **Version** | **Changes**                   | **Date**         | **Modified By**   |
 |-------------|-------------------------------|------------------|-------------------|
-| 1.0         | Initial Draft                 |'September 30, 2024'| 'Josh Madakor' |
+| 1.0         | Initial Draft                 |'September 6, 2024'| 'Josh Madakor' |
 | 2.0         | Updated draft                 | `April 15, 2025`  | `Jordan West`   |
